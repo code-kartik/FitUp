@@ -4,8 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     tools:context=".DashboardActivity">
 
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        app:cardBackgroundColor="#FBFBFF"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alata"
+            android:padding="12dp"
+            android:text="This Week"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/steps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:drawableStart="@drawable/jogging"
+            android:fontFamily="@font/alata"
+            android:text="0 steps"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="105dp"
+            android:drawableStart="@drawable/baseline_local_fire_department_24"
+            android:fontFamily="@font/alata"
+            android:text="Calories Burned"
+            android:textColor="#FFB347"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/alata"
+            android:text="0 kcal"
+            android:textColor="#FCB147"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="105dp"
+            android:drawableStart="@drawable/distance"
+            android:fontFamily="@font/alata"
+            android:text="Distance"
+            android:textColor="#F06562"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/alata"
+            android:text="0.0 KM"
+            android:textColor="#F06562"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="130dp"
+            android:background="?android:attr/listDivider" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="60dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/alata"
+            android:text="ACHIEVEMENTS"
+            android:textAlignment="center"
+            android:textColor="#0F4A00"
+            android:textSize="28dp"
+            android:drawableStart="@drawable/trophy"/>
+
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

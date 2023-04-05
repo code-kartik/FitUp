@@ -19,11 +19,15 @@ class MainActivity : AppCompatActivity() {
         val login: Button = findViewById(R.id.loginBtn)
 
         login.setOnClickListener {
-            if(userEmail.toString() == "admin" && userPassword.toString() == "admin"){
-                val intent = Intent(this@MainActivity,DashboardActivity::class.java)
+            val intent = Intent(this,DashboardActivity::class.java)
+            startActivity(intent)
+
+            /*
+            if(userEmail.toString() == "admin" || userPassword.toString() == "admin"){
+                val intent = Intent(this,DashboardActivity::class.java)
                 startActivity(intent)
             }
-            else{ Toast.makeText(this@MainActivity, "Incorrect Credentials!", Toast.LENGTH_SHORT).show() }
+            else{ Toast.makeText(this@MainActivity, "Incorrect Credentials!", Toast.LENGTH_SHORT).show() }*/
         }
     }
 }
