@@ -30,7 +30,7 @@
             android:textSize="28sp" />
 
         <TextView
-            android:id="@+id/steps"
+            android:id="@+id/stepsTaken"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
