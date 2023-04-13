@@ -11,22 +11,28 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import com.example.fitnessapp.databinding.ActivityDashboardBinding
+import com.example.fitnessapp.databinding.ActivityMainBinding
 
 class DashboardActivity : AppCompatActivity(), SensorEventListener {
 
     var sensorManager: SensorManager? = null
-    var totalSteps = 0f
-    var previousTotalSteps = 0f
+    var totalSteps: Float = 0.0f
+    var previousTotalSteps: Float = 0.0f
     private var running = false
 
-    val stepsTaken:TextView = findViewById(R.id.stepsTaken)
+    private lateinit var binding: ActivityDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard)
+        binding = ActivityDashboardBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         loadData()
         resetSteps()
+
+        supportActionBar?.hide()
 
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager?
     }
@@ -54,7 +60,7 @@ class DashboardActivity : AppCompatActivity(), SensorEventListener {
         if(running){
             totalSteps = p0!!.values[0]
             val currentSteps = totalSteps.toInt() - previousTotalSteps.toInt()
-            stepsTaken.text = ("$currentSteps steps")
+            binding.stepsTaken.text = ("$currentSteps steps")
         }
     }
 
@@ -63,12 +69,12 @@ class DashboardActivity : AppCompatActivity(), SensorEventListener {
     }
 
     fun resetSteps(){
-        stepsTaken.setOnClickListener{
-            Toast.makeText(this,"Long Press to Reset", Toast.LENGTH_SHORT)
+        binding.stepsTaken.setOnClickListener{
+            Toast.makeText(this,"Long Press to Reset", Toast.LENGTH_SHORT).show()
         }
-        stepsTaken.setOnLongClickListener {
+        binding.stepsTaken.setOnLongClickListener {
             previousTotalSteps = totalSteps
-            stepsTaken.text = 0.toString()
+            binding.stepsTaken.text = 0.toString()
 
             saveData()
 
