@@ -21,20 +21,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/alata"
-            android:padding="12dp"
-            android:text="This Week"
-            android:textColor="@color/black"
-            android:textSize="28sp" />
-
-        <TextView
             android:id="@+id/stepsTaken"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="50dp"
             android:drawableStart="@drawable/jogging"
             android:fontFamily="@font/alata"
             android:text="0 steps"
@@ -55,6 +46,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/caloriesBurned"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -79,6 +71,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/distanceTravelled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -99,25 +92,4 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="60dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/alata"
-            android:text="ACHIEVEMENTS"
-            android:textAlignment="center"
-            android:textColor="#0F4A00"
-            android:textSize="28dp"
-            android:drawableStart="@drawable/trophy"/>
-
-    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
